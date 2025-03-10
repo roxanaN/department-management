@@ -19,6 +19,7 @@ Before running this application, ensure you have the following installed on your
 
 ## Project Structure
 
+```
 .
 ├── Dockerfile
 ├── README.md
@@ -46,6 +47,7 @@ Before running this application, ensure you have the following installed on your
 ├── stored_procedures.sql
 └── utils
     └── utils.go
+```
 
 ## Exposed Ports
 
