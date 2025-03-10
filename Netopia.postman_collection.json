@@ -1,0 +1,518 @@
+{
+	"info": {
+		"_postman_id": "87c2b944-3371-41e7-8bd6-4783dc6c8697",
+		"name": "Netopia",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "13875024"
+	},
+	"item": [
+		{
+			"name": "login",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"email\": \"roxana.nemulescu@gmail.com\",\r\n  \"password\": \"pass123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get hierarchy",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiMjNmNTdiZTUtZmQ5MC0xMWVmLTk2MzctMDI0MmFjMTIwMDAyIiwiZW1haWwiOiJyb3hhbmEubmVtdWxlc2N1QGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImV4cCI6MTc0MTY4NDU0MX0.U5iTiQb5dpzzFg6aSrcQBFrZBvQeHhmWmICVvFF5Kf0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"IT\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/departments/hierarchy",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"departments",
+						"hierarchy"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get all depts",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiMjNmNTdiZTUtZmQ5MC0xMWVmLTk2MzctMDI0MmFjMTIwMDAyIiwiZW1haWwiOiJyb3hhbmEubmVtdWxlc2N1QGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImV4cCI6MTc0MTY4NDU0MX0.U5iTiQb5dpzzFg6aSrcQBFrZBvQeHhmWmICVvFF5Kf0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"IT\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/departments",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"departments"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete dept",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiMjNmNTdiZTUtZmQ5MC0xMWVmLTk2MzctMDI0MmFjMTIwMDAyIiwiZW1haWwiOiJyb3hhbmEubmVtdWxlc2N1QGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImV4cCI6MTc0MTY4NDU0MX0.U5iTiQb5dpzzFg6aSrcQBFrZBvQeHhmWmICVvFF5Kf0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": \"6ac955b2-fd9b-11ef-b246-0242ac120002\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/departments/delete",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"departments",
+						"delete"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add dept",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiMjNmNTdiZTUtZmQ5MC0xMWVmLTk2MzctMDI0MmFjMTIwMDAyIiwiZW1haWwiOiJyb3hhbmEubmVtdWxlc2N1QGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImV4cCI6MTc0MTY4NDU0MX0.U5iTiQb5dpzzFg6aSrcQBFrZBvQeHhmWmICVvFF5Kf0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"id\": \"23f0d272-fd90-11ef-9637-0242ac120002\",\r\n        \"name\": \"QA\",\r\n        \"flags\": 0\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/departments",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"departments"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update dept",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiMjNmNTdiZTUtZmQ5MC0xMWVmLTk2MzctMDI0MmFjMTIwMDAyIiwiZW1haWwiOiJyb3hhbmEubmVtdWxlc2N1QGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImV4cCI6MTc0MTY4NDU0MX0.U5iTiQb5dpzzFg6aSrcQBFrZBvQeHhmWmICVvFF5Kf0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"id\": \"6ac955b2-fd9b-11ef-b246-0242ac120002\",\r\n        \"name\": \"QA\",\r\n        \"flags\": 1\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/departments",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"departments"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "register",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"email\": \"roxana.nemulescu@gmail.com\",\r\n  \"password\": \"pass123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add user",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiMjNmNTdiZTUtZmQ5MC0xMWVmLTk2MzctMDI0MmFjMTIwMDAyIiwiZW1haWwiOiJyb3hhbmEubmVtdWxlc2N1QGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImV4cCI6MTc0MTY4NDU0MX0.U5iTiQb5dpzzFg6aSrcQBFrZBvQeHhmWmICVvFF5Kf0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"emasdsil22@gmail.com\",\r\n    \"role\": \"user\",\r\n    \"department\": \"QA\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete user by user_id",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiMjNmNTdiZTUtZmQ5MC0xMWVmLTk2MzctMDI0MmFjMTIwMDAyIiwiZW1haWwiOiJyb3hhbmEubmVtdWxlc2N1QGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImV4cCI6MTc0MTY4NDU0MX0.U5iTiQb5dpzzFg6aSrcQBFrZBvQeHhmWmICVvFF5Kf0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": \"35f5fd87-f2bc-4d9d-828d-36823ab13553\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get all users",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiMjNmNTdiZTUtZmQ5MC0xMWVmLTk2MzctMDI0MmFjMTIwMDAyIiwiZW1haWwiOiJyb3hhbmEubmVtdWxlc2N1QGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImV4cCI6MTc0MTY4NDU0MX0.U5iTiQb5dpzzFg6aSrcQBFrZBvQeHhmWmICVvFF5Kf0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": \"22se23\",\r\n    \"email\": \"email22@gmail.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get users hierarchy",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiMjNmNTdiZTUtZmQ5MC0xMWVmLTk2MzctMDI0MmFjMTIwMDAyIiwiZW1haWwiOiJyb3hhbmEubmVtdWxlc2N1QGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImV4cCI6MTc0MTY4NDU0MX0.U5iTiQb5dpzzFg6aSrcQBFrZBvQeHhmWmICVvFF5Kf0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"department_name\": \"HR\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/users/hierarchy",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"users",
+						"hierarchy"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "change user department",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiMjNmNTdiZTUtZmQ5MC0xMWVmLTk2MzctMDI0MmFjMTIwMDAyIiwiZW1haWwiOiJyb3hhbmEubmVtdWxlc2N1QGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImV4cCI6MTc0MTY4NDU0MX0.U5iTiQb5dpzzFg6aSrcQBFrZBvQeHhmWmICVvFF5Kf0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"user_id\": \"bafc56fa-fd99-11ef-897a-0242ac120002\",\r\n    \"new_department\": \"HR\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/users/department",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"users",
+						"department"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "change user role",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiMjNmNTdiZTUtZmQ5MC0xMWVmLTk2MzctMDI0MmFjMTIwMDAyIiwiZW1haWwiOiJyb3hhbmEubmVtdWxlc2N1QGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImV4cCI6MTc0MTY4NDU0MX0.U5iTiQb5dpzzFg6aSrcQBFrZBvQeHhmWmICVvFF5Kf0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"user_id\": \"bafc56fa-fd99-11ef-897a-0242ac120002\",\r\n    \"new_role\": \"admin\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/users/role",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"users",
+						"role"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
